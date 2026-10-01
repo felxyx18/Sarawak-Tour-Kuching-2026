@@ -1,0 +1,161 @@
+<!--Felicia Marlis 20DIT25F2010-->
+<!--Arabella Sim Siaw Qing 20DIT25F2006-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Borneo Trails – Tour Package Booking System</title>
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+
+<!-- HOME -->
+<div data-role="page" id="home" data-title="Borneo Trails">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false"><h1>Borneo Trails</h1></div>
+  <div role="main" class="ui-content home">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Discover Sarawak with local guides</h2>
+        <p>Rainforest treks, limestone caves and longhouse stays, planned end to end and bookable from your phone.</p>
+        <a href="#packages" data-transition="slide" class="ui-btn ui-corner-all primary">View tour packages</a>
+        <a href="#booking" data-transition="flip" class="ui-btn ui-corner-all ghost-light">Book now</a>
+      </div>
+    </section>
+    <section class="stats">
+      <div><strong>3</strong><span>Signature tours</span></div>
+      <div><strong>20</strong><span>Guests per group</span></div>
+      <div><strong>2 days</strong><span>Reply time</span></div>
+    </section>
+    <section class="features">
+      <h3>Why travel with Borneo Trails</h3>
+      <div class="feature"><h4>Local expert guides</h4><p>Licensed guides from Kuching who know the trails and the communities.</p></div>
+      <div class="feature"><h4>Everything included</h4><p>Transfers, park fees, meals and accommodation are listed on every package.</p></div>
+      <div class="feature"><h4>Simple booking</h4><p>Choose a package, pick a date and confirm. No account needed.</p></div>
+    </section>
+    <section class="cta">
+      <h3>Ready to go?</h3>
+      <a href="#booking" data-transition="slide" class="ui-btn ui-corner-all primary">Start your booking</a>
+    </section>
+  </div>
+  <div data-role="footer" data-position="fixed" data-tap-toggle="false"><div data-role="navbar"><ul><li><a href="#home" class="ui-btn-active ui-state-persist">Home</a></li><li><a href="#packages" data-transition="slide">Tour Packages</a></li><li><a href="#booking" data-transition="slide">Booking</a></li><li><a href="#contact" data-transition="slide">Contact Us</a></li></ul></div></div>
+</div>
+
+<!-- TOUR PACKAGES -->
+<div data-role="page" id="packages" data-title="Tour Packages">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false"><a href="#home" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Back</a><h1>Tour Packages</h1></div>
+  <div role="main" class="ui-content">
+    <p class="hint">Tap a price to see the duration. Tap “Details” for what is included.</p>
+    <article class="pkg">
+      <img class="pkg-img" src="image/Photo 1.jpg" onerror="this.onerror=null;this.src='images/bako.svg'" alt="Bako coastline" loading="lazy">
+      <h3>Bako National Park</h3>
+      <span class="tip" tabindex="0" role="button" aria-label="Show duration" data-tip="Duration: 2 days / 1 night">RM 450 per person</span>
+      <a href="#pop-bako" data-rel="popup" data-transition="pop" class="ui-btn ui-btn-inline ui-mini ui-corner-all">Details</a>
+    </article>
+    <article class="pkg">
+      <img class="pkg-img" src="image/photo 6.jpg" onerror="this.onerror=null;this.src='images/mulu.svg'" alt="Mulu caves entrance" loading="lazy">
+      <h3>Mulu Caves Explorer</h3>
+      <span class="tip" tabindex="0" role="button" aria-label="Show duration" data-tip="Duration: 4 days / 3 nights">RM 1,380 per person</span>
+      <a href="#pop-mulu" data-rel="popup" data-transition="pop" class="ui-btn ui-btn-inline ui-mini ui-corner-all">Details</a>
+    </article>
+    <article class="pkg">
+      <img class="pkg-img" src="image/long2.jpg" onerror="this.onerror=null;this.src='images/longhouse.svg'" alt="Sarawak longhouse" loading="lazy">
+      <h3>Longhouse &amp; Culture Trail</h3>
+      <span class="tip" tabindex="0" role="button" aria-label="Show duration" data-tip="Duration: 3 days / 2 nights">RM 820 per person</span>
+      <a href="#pop-longhouse" data-rel="popup" data-transition="pop" class="ui-btn ui-btn-inline ui-mini ui-corner-all">Details</a>
+    </article>
+    <div data-role="popup" id="pop-bako" class="popover" data-arrow="true" data-theme="a">
+      <h4>Bako National Park</h4>
+      <p><b>Destinations:</b> Telok Pandan Kecil, Bako coastline<br><b>Activities:</b> Jungle trekking, proboscis monkey spotting<br><b>Includes:</b> Boat transfer, guide, lodge stay</p>
+      <a href="#" class="ui-btn ui-btn-inline ui-mini ui-corner-all book-btn" data-pkg="bako">Book this package</a>
+    </div>
+    <div data-role="popup" id="pop-mulu" class="popover" data-arrow="true" data-theme="a">
+      <h4>Mulu Caves Explorer</h4>
+      <p><b>Destinations:</b> Deer Cave, Clearwater Cave<br><b>Activities:</b> Cave walks, bat flight viewing<br><b>Includes:</b> Flights, park fees, guide, meals</p>
+      <a href="#" class="ui-btn ui-btn-inline ui-mini ui-corner-all book-btn" data-pkg="mulu">Book this package</a>
+    </div>
+    <div data-role="popup" id="pop-longhouse" class="popover" data-arrow="true" data-theme="a">
+      <h4>Longhouse &amp; Culture Trail</h4>
+      <p><b>Destinations:</b> Annah Rais, Sarawak Cultural Village<br><b>Activities:</b> Tuak tasting, weaving demo, village walk<br><b>Includes:</b> Homestay, meals, transport</p>
+      <a href="#" class="ui-btn ui-btn-inline ui-mini ui-corner-all book-btn" data-pkg="longhouse">Book this package</a>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-tap-toggle="false"><div data-role="navbar"><ul><li><a href="#home" data-transition="slide" data-direction="reverse">Home</a></li><li><a href="#packages" class="ui-btn-active ui-state-persist">Tour Packages</a></li><li><a href="#booking" data-transition="slide">Booking</a></li><li><a href="#contact" data-transition="slide">Contact Us</a></li></ul></div></div>
+</div>
+
+<!-- BOOKING -->
+<div data-role="page" id="booking" data-title="Booking">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false"><a href="#home" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Back</a><h1>Booking</h1></div>
+  <div role="main" class="ui-content">
+    <form id="booking-form" novalidate>
+      <label for="b-name">Full name</label>
+      <input type="text" id="b-name" autocomplete="name" placeholder="e.g. Siti Aminah">
+      <label for="b-phone">Phone number</label>
+      <input type="tel" id="b-phone" autocomplete="tel" placeholder="e.g. 012-3456789">
+      <label for="b-email">Email</label>
+      <input type="email" id="b-email" autocomplete="email" placeholder="you@example.com">
+      <label for="b-date">Travel date</label>
+      <input type="date" id="b-date">
+      <label for="b-people">Number of participants</label>
+      <input type="number" id="b-people" min="1" max="20" value="1">
+      <label for="b-pkg">Tour package</label>
+      <select id="b-pkg">
+        <option value="">Choose a package</option>
+        <option value="bako" data-price="450">Bako National Park – RM 450</option>
+        <option value="mulu" data-price="1380">Mulu Caves Explorer – RM 1,380</option>
+        <option value="longhouse" data-price="820">Longhouse &amp; Culture Trail – RM 820</option>
+      </select>
+      <p id="b-total" class="total"></p>
+      <p id="b-error" class="error" role="alert"></p>
+      <button type="submit" id="b-submit" class="ui-btn ui-corner-all primary">Confirm booking</button>
+    </form>
+    <div id="b-success" class="success" role="status" style="display:none">
+      <p id="b-msg"></p>
+      <a href="#" id="b-new" class="ui-btn ui-corner-all ui-btn-inline">Make another booking</a>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-tap-toggle="false"><div data-role="navbar"><ul><li><a href="#home" data-transition="slide" data-direction="reverse">Home</a></li><li><a href="#packages" data-transition="slide" data-direction="reverse">Tour Packages</a></li><li><a href="#booking" class="ui-btn-active ui-state-persist">Booking</a></li><li><a href="#contact" data-transition="slide">Contact Us</a></li></ul></div></div>
+</div>
+
+<!-- CONTACT US -->
+<div data-role="page" id="contact" data-title="Contact Us">
+  <div data-role="header" data-position="fixed" data-tap-toggle="false"><a href="#home" data-rel="back" data-icon="arrow-l" data-iconpos="notext">Back</a><h1>Contact Us</h1></div>
+  <div role="main" class="ui-content">
+    <p>Questions about a package? Send us a message and we will reply within 2 working days.</p>
+    <a href="#contact-modal" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all primary">Open contact form</a>
+    <p class="hint">Borneo Trails, Kuching, Sarawak</p>
+
+    <div data-role="popup" id="contact-modal" data-dismissible="false" data-overlay-theme="b" class="modal">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <h3>Contact Us</h3>
+      <form id="contact-form" novalidate>
+        <label for="c-name">Name</label>
+        <input type="text" id="c-name" autocomplete="name">
+        <p class="error" id="e-name" role="alert"></p>
+        <label for="c-email">Email</label>
+        <input type="email" id="c-email" autocomplete="email">
+        <p class="error" id="e-email" role="alert"></p>
+        <label for="c-msg">Message</label>
+        <textarea id="c-msg"></textarea>
+        <p class="error" id="e-msg" role="alert"></p>
+        <label for="c-consent" class="consent">I consent to my information being stored and used only to reply to this enquiry.</label>
+        <input type="checkbox" id="c-consent">
+        <p class="error" id="e-consent" role="alert"></p>
+        <button type="submit" class="ui-btn ui-corner-all primary">Send message</button>
+        <p class="success" id="c-ok" role="status" style="display:none">Message sent. Thank you!</p>
+      </form>
+    </div>
+  </div>
+  <div data-role="footer" data-position="fixed" data-tap-toggle="false"><div data-role="navbar"><ul><li><a href="#home" data-transition="slide" data-direction="reverse">Home</a></li><li><a href="#packages" data-transition="slide" data-direction="reverse">Tour Packages</a></li><li><a href="#booking" data-transition="slide" data-direction="reverse">Booking</a></li><li><a href="#contact" class="ui-btn-active ui-state-persist">Contact Us</a></li></ul></div></div>
+</div>
+
+</body>
+</html>
